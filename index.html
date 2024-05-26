@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Product management system" />
+    <meta name="keywords" content="product, management, system" />
+    <meta name="author" content="Shabaz Mahamood" />
+    <link rel="shortcut icon" href="./favicon_io (9)/favicon.ico" type="image/svg+xml" />
+    <title>PMS-Product Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2>PMS</h2>
+        <p>PRODUCT MANAGEMENT SYSTEM</p>
+      </div>
+
+      <div class="inputs">
+        <input type="text" placeholder="title" data-input-title />
+        <div class="price">
+          <input
+            onkeyup="getTotalPrice()"
+            type="number"
+            placeholder="price"
+            data-input-price
+          />
+          <input
+            onkeyup="getTotalPrice()"
+            type="number"
+            placeholder="taxes"
+            data-input-tax
+          />
+          <input
+            onkeyup="getTotalPrice()"
+            type="number"
+            placeholder="ads"
+            data-input-ads
+          />
+          <input
+            onkeyup="getTotalPrice()"
+            type="number"
+            placeholder="discount"
+            data-input-discount
+          />
+          <p onkeyup="getTotalPrice()" class="total-price" data-total-price>
+            0
+          </p>
+        </div>
+        <input type="text" placeholder="count" data-input-count />
+        <input type="text" placeholder="category" data-input-category />
+        <button class="btn-create" data-submit-btn>Create</button>
+      </div>
+
+      <div class="outputs">
+        <div class="search-block">
+          <input type="text" placeholder="search" data-search-input />
+          <div data-search-filter>
+            <button
+              onclick="getSearchMood(this.id)"
+              id="searchTitle"
+              data-search-by-title
+            >
+              Search by title
+            </button>
+            <button
+              onclick="getSearchMood(this.id)"
+              id="searchCategory"
+              data-search-by-category
+            >
+              Search by category
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn-delete-all" data-delete-all>Delete All</button>
+        </div>
+
+        <div class="products">
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>taxes</th>
+                <th>ads</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>category</th>
+                <th>update</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; <span class="copyright-year">2024</span>
+        <a
+          href="https://www.facebook.com/CAUFSK4701111?mibextid=JRoKGi"
+          target="_blank"
+          class="copyright-link"
+        >
+          Shabaz Mahamood
+        </a>
+        . All Right Reserved
+      </p>
+    </div>
+  </footer>
+  </body>
+</html>
